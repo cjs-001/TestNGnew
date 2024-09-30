@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="after_before_suite.Basics_01"/>
+	  <class name="after_before_suite.Basics_02"/>  
+      	  
+      
+
+    </classes>
+  </test>
+  
+   <test name= "Include and exclude">
+	  <classes>
+		 <class name="after_before_suite.CarLoan">
+			 <methods>
+			    <exclude name= "apiumCar"/>
+			 </methods>
+		 </class> 
+		 <class name="after_before_suite.HomeLoan">
+			 <methods>
+				 <exclude name="web.*">
+					 
+				 </exclude>
+			 </methods>
+		 </class> 
+	  </classes>
+  </test>
+</suite> <!-- Suite -->
